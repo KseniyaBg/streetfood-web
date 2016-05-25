@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Streetfood</title>
+		<link rel="icon" href="images/favicon.ico">
+		<link rel="shortcut icon" href="images/favicon.ico" />
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/camera.css">
+		<link rel="stylesheet" href="css/form.css">
+		<link rel="stylesheet" href="css/worldmap.css">
+		<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+		<script src="https://d3js.org/topojson.v1.min.js"></script>
+		<script src="js/worldmap.js"></script>
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery-migrate-1.1.1.js"></script>
+		<script src="js/superfish.js"></script>
+		<script src="js/forms.js"></script>
+		<script src="js/jquery.ui.totop.js"></script>
+		<script src="js/jquery.equalheights.js"></script>
+		<script src="js/jquery.easing.1.3.js"></script>
+		<script src="js/jquery.ui.totop.js"></script>
+		<script src="js/tms-0.4.1.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('.slider_wrapper')._TMS({
+					show:0,
+					pauseOnHover:false,
+					prevBu:'.prev',
+					nextBu:'.next',
+					playBu:false,
+					duration:800,
+					preset:'fade',
+					pagination:true,//'.pagination',true,'<ul></ul>'222
+					pagNums:false,
+					slideshow:8000,
+					numStatus:false,
+					banners: 'fade',
+					waitBannerAnimation:false,
+					progressBar:false
+				});
+			});
+			$(document).ready(function(){
+				!function(){
+			var map=[]
+			 ,names=[]
+			 ,win=$(window)
+			 ,header=$('header')
+			 ,currClass
+			$('.content').each(function(n){
+			 map[n]=this.offsetTop
+			 names[n]=$(this).attr('id')
+			})
+			win
+			 .on('scroll',function(){
+				var i=0
+				while(map[i++]<=win.scrollTop());
+				if(currClass!==names[i-2])
+				currClass=names[i-2]
+				header.removeAttr("class").addClass(names[i-2])
+			 })
+			}(); });
+					function goToByScroll(id){
+				$('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
+				}
+				$(document).ready(function(){
+					$().UItoTop({ easingType: 'easeOutQuart' });
+				});
+		</script>
+		<!--[if lt IE 8]>
+			<div style=' clear: both; text-align:center; position: relative;'>
+				<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+					<img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+				</a>
+			</div>
+		<![endif]-->
+		<!--[if lt IE 9]>
+			<script src="js/html5shiv.js"></script>
+			<link rel="stylesheet" media="screen" href="css/ie.css">
+		<![endif]-->
+	</head>
+	<body class="">
+<!--==============================header=================================-->
+		<header class="page1">
+			<div class="container_12">
+				<div class="grid_12">
+					<h1><a href="#" onClick="goToByScroll('page1'); return false;"><img src="images/logo.png" alt="Streetfood"></a></h1>
+					<div class="menu_block">
+						<nav class="">
+							<ul class="sf-menu">
+								<li class="current men"><a onClick="goToByScroll('page1'); return false;" href="#">Streetfood</a> <strong class="hover"></strong></li>
+								<li class="men1"><a onClick="goToByScroll('page2'); return false;" href="#">Erforsche den Trend</a><strong class="hover"></strong></li>
+								<li class=" men3"><a onClick="goToByScroll('page4'); return false;" href="#">Team</a> <strong class="hover"></strong></li>
+								<li class=" men4"><a onClick="goToByScroll('page5'); return false;" href="#">Kontakt</a> <strong class="hover"></strong></li>
+							</ul>
+						</nav>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</header>
+<!--=======content================================-->
+		<div id="page1" class="content">
+			<div class="ic"></div>
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="slider_wrapper">
+						<ul class="items">
+							<li>
+								<img src="images/spacer.gif" alt="">
+								<div class="caption banner">
+									<h2>Informiere dich über Streetfood</h2>
+								</div>
+							</li>
+							<li>
+								<img src="images/spacer.gif" alt="">
+								<div class="caption banner">
+									<h2>Was ist Streetfood?</h2>
+								</div>
+							</li>
+							<li>
+								<img src="images/spacer.gif" alt="">
+								<div class="caption banner">
+									<h2>Finde es hier heraus.</h2>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="page2" class="content">
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="slogan">
+						<h3>Erforsche den Trend</h3>
+						<div class="text1">
+							mit prägnanten Beschreibungen zu allen möglichen Streetfoods
+						</div>
+					</div>
+				</div>
+				<div class="grid_3">
+					<div class="box maxheight">
+						<img src="images/streetfoods/donut.jpg" alt="">
+						<div class="text1"><a href="streetfood.html">Donut</a></div>Beschreibung
+					</div>
+				</div>
+				<div class="grid_3">
+					<div class="box maxheight">
+						<img src="images/box_img2.jpg" alt="">
+						<div class="text1"><a href="#">Streetfood2</a></div> Beschreibung
+					</div>
+				</div>
+				<div class="grid_3">
+					<div class="box maxheight">
+						<img src="images/box_img3.jpg" alt="">
+						<div class="text1"><a href="#">Streetfood3</a></div>Beschreibung
+		
+					</div>
+				</div>
+				<div class="grid_3">
+					<div class="box maxheight">
+						<img src="images/box_img4.jpg" alt="">
+						<div class="text1"><a href="#">Streetfood4</a></div>Beschreibung
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="page4" class="content">
+			<div class="container_12">
+				<div class="grid_12">
+					<h3>Das Team</h3>
+					<div class="companies">
+						<div class="grid_3">
+							<img src="images/logo7.jpg" alt="">
+							<div class="text1">Peter Gloor (Dozent)</div>..liebt Streetfood.
+						</div>
+						<div class="grid_3">
+							<img src="images/logo8.jpg" alt="">
+							<div class="text1">Matthias (Couch)</div>..liebt Streetfood.
+						</div>
+						<div class="grid_3">
+							<img src="images/logo8.jpg" alt="">
+							<div class="text1">Gloria Volkmann</div>..liebt Streetfood.
+						</div>
+						<div class="grid_3">
+							<img src="images/logo1.jpg" alt="">
+							<div class="text1">Celine</div>..liebt Streetfood.
+						</div>
+						<div class="grid_3">
+							<img src="images/logo2.jpg" alt="">
+							<div class="text1">Kseniya </div>..liebt Streetfood.
+						</div>
+						<div class="grid_3">
+							<img src="images/logo3.jpg" alt="">
+							<div class="text1">Matthias</div>..liebt Streetfood.
+						</div>
+						<div class="grid_3">
+							<img src="images/logo3.jpg" alt="">
+							<div class="text1">Mergim</div>..liebt Streetfood.
+						</div>
+						<div class="grid_3">
+							<img src="images/logo4.jpg" alt="">
+							<div class="text1">Oliver</div>..liebt Streetfood.
+						</div>
+						<div class="grid_3">
+								<img src="images/logo5.jpg" alt="">
+								<div class="text1">Thomas</div>..liebt Streetfood.
+						</div>
+						<div class="grid_3">
+								<img src="images/logo6.jpg" alt="">
+								<div class="text1">Tobias</div>..liebt Streetfood.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="page5" class="content">
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="slogan">
+						<h3>Kontakt</h3>
+						<div class="text1">
+							
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<div class="map">
+					<div class="grid_3">
+						<div class="text1">Adresse</div>
+						<address>
+							<dl>
+								<dt>Peter A. Gloor<br>
+								MIT Center for Collective Intelligence<br>
+								245 First Street<br>
+								Cambridge, MA 02142<br>
+								Cambridge, MA 02142<br>
+								</dt>
+								<dd><span>Telephone:</span>+1 617 253 7018</dd>
+								<dd>E-mail: <a href="#" class="link-1">pgloor@mit.edu</a></dd>
+							</dl>
+						</address>
+					</div>
+					<div class="grid_3">
+						<div class="text1">&nbsp;</div>
+						<figure class="">
+							<iframe src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Brooklyn,+New+York,+NY,+United+States&amp;aq=0&amp;sll=37.0625,-95.677068&amp;sspn=61.282355,146.513672&amp;ie=UTF8&amp;hq=&amp;hnear=Brooklyn,+Kings,+New+York&amp;ll=40.649974,-73.950005&amp;spn=0.01628,0.025663&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+						</figure>
+					</div>
+					<div class="grid_5 prefix_1">
+						<div class="text1">Stelle uns deine Fragen</div>
+						<form id="form">
+						<div class="success_wrapper">
+						<div class="success">E-Mail wurde versendet<br>
+						<strong>Wir melden uns bald</strong> </div></div>
+						<fieldset>
+						<label class="name">
+						<input type="text" value="Name:">
+						<br class="clear">
+						<span class="error error-empty">*Nicht gültig</span><span class="empty error-empty">*Feld wird benötigt.</span> </label>
+						<label class="email">
+						<input type="text" value="E-mail:">
+						<br class="clear">
+						<span class="error error-empty">*Gültige E-Mail angeben.</span><span class="empty error-empty">*Feld wird benötigt.</span> </label>
+						<label class="message">
+						<textarea>Message:</textarea>
+						<br class="clear">
+						<span class="error">*Nachricht zu kurz.</span> <span class="empty">*Das Feld wird benötigt.</span> </label>
+						<div class="clear"></div>
+						<div class="btns"><a data-type="submit" class="link1">Absenden</a>
+						<div class="clear"></div>
+						</div></fieldset></form>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+<!--==============================footer=================================-->
+		<footer>
+			<div class="container_12">
+				<div class="grid_12">
+				</div>
+				<div class="clear"></div>
+			</div>
+		</footer>
+	</body>
+</html>
