@@ -89,7 +89,9 @@
 						<nav class="">
 							<ul class="sf-menu">
 								<li class="current men"><a onClick="goToByScroll('page01'); return false;" href="#">Details</a> <strong class="hover"></strong></li>
-								<li class="men2"><a href="index.html">Zurück zur Startseite</a> <strong class="hover"></strong></li>
+								<li class="men2"><a onClick="goToByScroll('page02'); return false;" href="#">Weltkarte</a> <strong class="hover"></strong></li>
+								<li class="men3"><a onClick="goToByScroll('page03'); return false;" href="#">Verlaufslinie</a> <strong class="hover"></strong></li>
+								<li class="men4"><a href="index.html">Zurück zur Startseite</a> <strong class="hover"></strong></li>
 							</ul>
 						</nav>
 						<div class="clear"></div>
@@ -101,15 +103,29 @@
 <!--=======content================================-->
 		<div id="page01" class="content">
 			<div class="container_12">
-				<!--<div style="display:block; text-align:left; float:left; font-size:48px; padding-top: 20px; padding-bottom:35px;">Interaktive Weltkarte</div>
-				<div style="display:block; text-align:right; font-size:48px; padding-top:20px;padding-bottom:35px;">Details</div> -->
+				<h2 style="padding-top:0px"> Details </h2>
+					<div id="streetfood_detailview">
+						 	<img src="images/streetfoods/donut.jpg"/>
+						 	<p style="text-align:left; font-size:auto;"> Ein Donut (eigentlich doughnut, dt. „Teignuss“) ist ein handtellergroßer amerikanischer/kanadischer Krapfen aus Hefeteig oder Rührteig (auch Schmalzgebäckkringel oder Lochkrapfen genannt). Die Form ist entweder ein Torus (Ring ähnlich einem Bagel) oder – seltener – ein abgeflachter Ballen, der häufig Schokolade oder eine andere süße Füllung enthält. </p>
+					</div>
+			</div>	
+		</div>
+		<div id="page02" class="content" style="padding-top:100px">
+			<h2 style="padding-top:0px"> Weltkarte </h2>
+			<h4> Erforsche den Trend des Donuts mit der interaktiven Weltkarte </h4>
+			<div class="container_12";>
+				
 					<script type="text/javascript">
 						loadWorldmap();
 					</script>
-					
-					<div id="streetfood_detailview">
-					    <img src="images/streetfoods/donut.jpg" />
-					</div>
+			</div>	
+		</div>
+		<div id="page03" class="content" style="padding-top:100px">
+			<h2 style="padding-top:0px"> Verlaufslinie </h2>
+			<h4> Schaue dir die Verlaufslinie an</h4>
+			<div class="container_12";>
+				
+					<p> MODUL </p>
 			</div>	
 		</div>
 <!--==============================footer=================================-->
