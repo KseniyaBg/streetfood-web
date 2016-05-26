@@ -1,14 +1,11 @@
 .subunit {
-    fill: none;
-    stroke: #FFF;
+    stroke: #334960;
     stroke-width: 1px;
 }
 text.subunit-label {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    font-weight: 300;
+    font-family: "Signika", sans-serif;
+    font-weight: normal;
     text-anchor: middle;
-    fill: #000;
 }
 .subunit-label {
     display: none;
