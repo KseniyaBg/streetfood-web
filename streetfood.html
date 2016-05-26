@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="css/camera.css">
 		<link rel="stylesheet" href="css/form.css">
 		<link rel="stylesheet" href="css/worldmap.css">
+		<link rel="stylesheet" href="css/lineChart.css">
 		<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 		<script src="https://d3js.org/topojson.v1.min.js"></script>
 		<script src="js/worldmap.js"></script>
@@ -21,8 +22,16 @@
 		<script src="js/jquery.easing.1.3.js"></script>
 		<script src="js/jquery.ui.totop.js"></script>
 		<script src="js/tms-0.4.1.js"></script>
+		<script src="js/lineChart.js"></script>
+
 		<script>
+
+			var foodName = "Doughnut";
+
 			$(document).ready(function(){
+
+				createChart(foodName, "lineChart");
+
 				$('.slider_wrapper')._TMS({
 					show:0,
 					pauseOnHover:false,
@@ -123,7 +132,7 @@
 		<div id="page03" class="content" style="padding-top:100px">
 			<h2 style="padding-top:0px"> Verlaufslinie </h2>
 			<h4> Schaue dir die Verlaufslinie an</h4>
-			<div class="container_12";>
+			<div id="lineChart" class="container_12";>
 				
 					<p> MODUL </p>
 			</div>	
