@@ -11,7 +11,7 @@
 					successCl:'success',
 					successShow:'4000',
 					mailHandlerURL:'bat/MailHandler.php',
-					ownerEmail:'MergimAlija@gmx.de',
+					ownerEmail:'mergimalija@bplaced.net',
 					stripHTML:true,
 					smtpMailServer:'localhost',
 					targets:'input,textarea',

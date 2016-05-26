@@ -28,7 +28,7 @@ body {
 
 /* `Grid >> Global
 ----------------------------------------------------------------------------------------------------*/
-
+.grid_team,
 .grid_1,
 .grid_2,
 .grid_3,
@@ -43,9 +43,10 @@ body {
 .grid_12 {
   display: inline;
   float: left;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
+
 
 .push_1, .pull_1,
 .push_2, .pull_2,
@@ -85,6 +86,7 @@ body {
 
 .container_12 .grid_3 {
   width: 220px;
+  height:250px;
 }
 
 .container_12 .grid_4 {
@@ -121,6 +123,10 @@ body {
 
 .container_12 .grid_12 {
   width: 940px;
+}
+.container_12 .grid_team{
+  width: 150px,
+  height: 250px;
 }
 
 /* `Prefix Extra Space >> 12 Columns
