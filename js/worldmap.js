@@ -13,12 +13,12 @@ function loadWorldmap(){
 			    var path = d3.geo.path().projection(projection);
 			    var graticule = d3.geo.graticule();
 			    // SVG related definitions
-			    var svg = d3.select('body').append('svg')
+			    var svg = d3.select('#map').append('svg')
 			            .attr({'width': width, 'height': height})
 			            .append('g');
 			    var filter = svg.append('defs')
 			            .append('filter')
-			            .attr({'x':0, 'y':0, 'width':1, 'height':1, 'id':'gray-background'});
+						.attr({'x':0, 'y':0, 'width':1, 'height':1, 'id':'gray-background'});
 			    filter.append('feFlood')
 			            .attr('flood-color', '#f2f2f2')
 			            .attr('result', 'COLOR');
@@ -99,7 +99,7 @@ function loadWorldmap(){
 			                //.attr('transform', function(d) { return 'translate('+ path.centroid(d) +')'; })
 			                .attr('transform', function(d) { return 'translate('+(width-(5*d.properties.name.length))+','+(15)+')'; })
 			                .attr('dy', '.35em')
-			                .attr('filter', 'url(#gray-background)')
+			                //.attr('filter', 'url(#gray-background)')
 			                .append('svg:tspan')
 			                .attr('x', 0)
 			                .attr('dy', 5)
@@ -111,9 +111,11 @@ function loadWorldmap(){
 			    }
 
 			    function mouseoverLegend(datum, index) {
-			        d3.selectAll('.subunit-label.la'+datum.id+datum.properties.name.replace(/[ \.#']+/g,''))
-			                .style('display', 'inline-block');
-			        d3.selectAll('.subunit.ca'+datum.id)
+			        /*d3.selectAll('.subunit-label.la'+datum.id+datum.properties.name.replace(/[ \.#']+/g,''))
+			                .style('display', 'inline-block');*/
+					d3.selectAll('.subunit-label.la'+datum.id+datum.properties.name.replace(/[ \.#']+/g,''))
+			                .style({'display': 'inline-block', 'fill': '#ecedef'});
+					d3.selectAll('.subunit.ca'+datum.id)
 			                .style('fill', '#cc6699');
 			    }
 
