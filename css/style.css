@@ -224,7 +224,7 @@ border-color: #334960 transparent transparent transparent;
 }
 
 #page4:after {
-	border-color: #f17c72 transparent transparent transparent;
+	border-color: #334960 transparent transparent transparent;
 
 }
 
@@ -267,7 +267,7 @@ header.page5 .men4 .hover{
 
 #page2 {
 	background-color: #f17c72;
-	padding-top: 230px;
+	padding-top: 150px;
 	padding-bottom: 500px;
 	padding-bottom: 190px;
 }
@@ -459,7 +459,7 @@ header.page5 .hover {
 }
 
 #page4 {
-	padding-top: 231px;
+	padding-top: 150px;
 	padding-bottom: 186px;
 }
 
@@ -492,7 +492,7 @@ header.page5 .hover {
 }
 
 #page5 {
-	padding-top: 230px;
+	padding-top: 150px;
 	padding-bottom: 190px;
 }
 
