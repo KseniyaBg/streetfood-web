@@ -507,6 +507,34 @@ header.page5 .hover {
     margin-bottom: 110px;
 }
 
+/**** Streetfood images ***/
+.streetfoods {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.streetfood {
+    width: 25%;
+    margin: auto;
+}
+
+.streetfood .img {
+    height: 150px;
+    width: 150px;
+}
+
+.streetfood a {
+    display: block;
+    padding: 25px;
+}
+
+.streetfood a:hover {
+    background-color: #d06b62;
+    color: rgba(65, 33, 30, 0.7);
+    border-radius: 5px;
+}
+
 
 /****Twitter***/
 
@@ -623,30 +651,29 @@ footer a:hover {
     background-position: right 0;
 }
 
-
 /** Detail Page **/
 
-
 #streetfood_detailview {
-    height: auto;
-    width: auto
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
 }
 
-#streetfood_detailview img {
-    float: left;
+#streetfood_detailview .img {
+    order: 1;
+    flex-basis: 100%
 }
 
-.description {
+#streetfood_detailview .description {
+    order: 2;
     font-size: 19px;
     line-height: 27px;
     text-align: left;
 }
 
-
-#map{
+#map {
     height: 580px;
 }
-
 
 /*
 #page01 {
