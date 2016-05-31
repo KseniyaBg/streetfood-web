@@ -662,7 +662,7 @@ footer a:hover {
 
 #streetfood_detailview .img {
     order: 1;
-    flex-basis: 100%
+    flex-basis: 25%
 }
 
 #streetfood_detailview .description {
@@ -675,16 +675,5 @@ footer a:hover {
 #map {
     height: 580px;
 }
-
-/*
-#page01 {
-    top: 0px;
-}
-
-#page02 {
-    top: 0px;
-}
-*/
-
 
 

@@ -23,6 +23,7 @@
     <script src="js/jquery.ui.totop.js"></script>
     <script src="js/tms-0.4.1.js"></script>
     <script src="js/lineChart.js"></script>
+    <script src="js/readJson.js"></script>
 
     <script>
 
@@ -77,6 +78,24 @@
             $().UItoTop({easingType: 'easeOutQuart'});
         });
     </script>
+
+    <script>
+
+        $(function() {
+
+           var foodName="Speiseeis"
+
+           $.getJSON('result_streetfood.json', function(data) {
+               $.each(data.Speiseeis, function(i, f) {
+                  var tblRow = "<tr>" + "<td> <img src=" + f.source + "> </td>" +
+                   "<td>" + f.desc + "</td>" + "</tr>"
+                   $(tblRow).appendTo("#streetfood tbody");
+             });
+
+       });
+
+    });
+    </script>
     <!--[if lt IE 8]>
     <div style=' clear: both; text-align:center; position: relative;'>
         <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
@@ -128,13 +147,22 @@
             <h3> Details </h3>
 
             <div id="streetfood_detailview">
-                <div class="img"><img src="images/streetfoods/donut.jpg"/></div>
+                <!-- <div class="img"><img src="images/streetfoods/donut.jpg"/></div> -->
 
-                <div class="description"> Ein Donut (eigentlich doughnut, dt. „Teignuss“) ist ein handtellergroßer
-                    amerikanischer/kanadischer Krapfen aus Hefeteig oder Rührteig (auch Schmalzgebäckkringel oder
-                    Lochkrapfen genannt). Die Form ist entweder ein Torus (Ring ähnlich einem Bagel) oder – seltener –
-                    ein abgeflachter Ballen, der häufig Schokolade oder eine andere süße Füllung enthält. </p>
-                </div>
+        
+             <table id= "streetfood" >
+                          <thead>
+                                <th width=150; height=150;> img </th>
+                                <th>description</th>
+                                
+                                </thead>
+                              <tbody>
+
+                               </tbody>
+                           </table>
+
+                        </div>
+    
             </div>
         </div>
     </div>
