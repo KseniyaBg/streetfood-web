@@ -23,7 +23,6 @@
     <script src="js/jquery.ui.totop.js"></script>
     <script src="js/tms-0.4.1.js"></script>
     <script src="js/lineChart.js"></script>
-    <script src="js/readJson.js"></script>
 
     <script>
 
@@ -81,21 +80,39 @@
 
     <script>
 
-        $(function() {
+        $(document).ready(function() {
 
-           var foodName="Speiseeis"
-
+           var foodName="Taco"
+   
            $.getJSON('result_streetfood.json', function(data) {
-               $.each(data.Speiseeis, function(i, f) {
-                  var tblRow = "<tr>" + "<td> <img src=" + f.source + "> </td>" +
-                   "<td>" + f.desc + "</td>" + "</tr>"
-                   $(tblRow).appendTo("#streetfood tbody");
-             });
 
-       });
 
-    });
-    </script>
+               		var foodData = data[foodName];
+					
+					var tblRow = "<tr>" + "<td> <img src=" + foodData.en.source + "> </td>" +
+					                 "<td>" + foodData.en.desc + "</td>" + "</tr>"
+					                 $(tblRow).appendTo("#streetfood tbody");
+
+             /*  	for (var foodName in data) {
+						var foodData = data[foodName];
+						console.log(foodData);
+						var tblRow = "<tr>" + "<td> <img src=" + foodData.en.source + "> </td>" +
+					                 "<td>" + foodData.en.desc + "</td>" + "</tr>"
+					                 $(tblRow).appendTo("#streetfood tbody");
+				} 
+
+                    $.each(data, function(i, foods) {
+                    var tblRow = "<tr>" + "<td> <img src=" + data[foodName].en.source + "> </td>" +
+                                     "<td>" + data[foodName].en.desc + "</td>" + "</tr>"
+                                     $(tblRow).appendTo("#streetfood tbody");
+                    });
+                    });
+                */
+			});
+			
+		});
+
+    </script> 
     <!--[if lt IE 8]>
     <div style=' clear: both; text-align:center; position: relative;'>
         <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
@@ -151,18 +168,17 @@
 
         
              <table id= "streetfood" >
-                          <thead>
+                          	<thead>
                                 <th width=150; height=150;> img </th>
                                 <th>description</th>
                                 
-                                </thead>
-                              <tbody>
+                            </thead>
+                            <tbody>
 
-                               </tbody>
+                            </tbody>
                            </table>
 
-                        </div>
-    
+                    </div>
             </div>
         </div>
     </div>
