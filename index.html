@@ -22,8 +22,13 @@
     <script src="js/jquery.ui.totop.js"></script>
     <script src="js/tms-0.4.1.js"></script>
 
+    <script src="js/streetfood-data.js"></script>
 
     <script>
+        function goToByScroll(id) {
+            $('html,body').animate({scrollTop: $("#" + id).offset().top}, 'slow');
+        }
+
         $(document).ready(function () {
             $('.slider_wrapper')._TMS({
                 show: 0,
@@ -41,8 +46,7 @@
                 waitBannerAnimation: false,
                 progressBar: false
             });
-        });
-        $(document).ready(function () {
+
             !function () {
                 var map = []
                         , names = []
@@ -62,14 +66,12 @@
                             header.removeAttr("class").addClass(names[i - 2])
                         })
             }();
-        });
-        function goToByScroll(id) {
-            $('html,body').animate({scrollTop: $("#" + id).offset().top}, 'slow');
-        }
-        $(document).ready(function () {
+
             $().UItoTop({easingType: 'easeOutQuart'});
         });
     </script>
+
+
     <!--[if lt IE 8]>
     <div style=' clear: both; text-align:center; position: relative;'>
         <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
@@ -159,42 +161,8 @@
                 </div>
             </div>
 
-            <div class="streetfoods">
-                <div class="streetfood">
-                    <a href="streetfood.html">
-                        <img src="images/streetfoods/donut.jpg" alt="">
+            <div id="streetfoods" class="streetfoods">
 
-                        <div class="text1">Donut 1</div>
-                    </a>
-                </div>
-                <div class="streetfood">
-                    <a href="streetfood.html">
-                        <img src="images/streetfoods/donut.jpg" alt="">
-
-                        <div class="text1">Donut 2</div>
-                    </a>
-                </div>
-                <div class="streetfood">
-                    <a href="streetfood.html">
-                        <img src="images/streetfoods/donut.jpg" alt="">
-
-                        <div class="text1">Donut 3</div>
-                    </a>
-                </div>
-                <div class="streetfood">
-                    <a href="streetfood.html">
-                        <img src="images/streetfoods/donut.jpg" alt="">
-
-                        <div class="text1">Donut 4</div>
-                    </a>
-                </div>
-                <div class="streetfood">
-                    <a href="streetfood.html">
-                        <img src="images/streetfoods/donut.jpg" alt="">
-
-                        <div class="text1">Donut 5</div>
-                    </a>
-                </div>
             </div>
         </div>
     </div>
