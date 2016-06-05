@@ -27,20 +27,26 @@
     <script>
 
         var foodName = encodeURIComponent(getParameterByName('food'));
-        console.log("param:");
-        console.log(foodName);
-
-        //var result = $.grep(myArray, function(e){ return e.id == id; });
+        var foodData;
 
         $(document).ready(function () {
+            loadData();
+        });
 
+        function loadData() {
+            $.getJSON("result_streetfood.json", function(data) {
+                foodData = data;
+                init();
+            });
+        }
+
+        function init() {
             initFoodInfo(foodName);
             initMap();
             createChart(foodName, "lineChart");
             $().UItoTop({easingType: 'easeOutQuart'});
             initSlider();
-
-        });
+        }
 
         function goToByScroll(id) {
             $('html,body').animate({scrollTop: $("#" + id).offset().top}, 'slow');
@@ -88,15 +94,12 @@
         }
 
         function initFoodInfo(foodName) {
-
-            $.getJSON("result_streetfood.json", function(data) {
-                $.each(data.foods, function(index, food) {
-                    if(food['name']==foodName){
-                        var tblRow = "<tr>" + "<td> <img src=" + food['image']['source'] + "> </td>" +
-                          "<td>" + food['description'] + "</td>" + "</tr>"
-                        $(tblRow).appendTo("#streetfood tbody");
-                    }
-                });
+            $.each(foodData.foods, function(index, food) {
+                if(food['name']==foodName){
+                    var tblRow = "<tr>" + "<td> <img src=" + food['image']['source'] + "> </td>" +
+                      "<td>" + food['description'] + "</td>" + "</tr>"
+                    $(tblRow).appendTo("#streetfood tbody");
+                }
             });
         }
 

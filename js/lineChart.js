@@ -1,7 +1,5 @@
 function createChart(foodName, element) {
 
-  console.log("creating chart");
-
   var margin = {top: 20, right: 20, bottom: 30, left: 50},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
@@ -36,8 +34,7 @@ function createChart(foodName, element) {
     var requiredData = [];
     var existingEntries = [];
     var foodData = data[foodName];
-    console.log("foodData: ");
-    console.log(foodData);
+
     for (var lang in foodData) {
       var lang = foodData[lang];
       for (var year in lang) {
