@@ -26,12 +26,27 @@
 
     <script>
 
-        var foodName = "Doughnut";
+        var foodName = encodeURIComponent(getParameterByName('food'));
+        console.log("param:");
+        console.log(foodName);
+
+        //var result = $.grep(myArray, function(e){ return e.id == id; });
 
         $(document).ready(function () {
 
+            initFoodInfo(foodName);
+            initMap();
             createChart(foodName, "lineChart");
+            $().UItoTop({easingType: 'easeOutQuart'});
+            initSlider();
 
+        });
+
+        function goToByScroll(id) {
+            $('html,body').animate({scrollTop: $("#" + id).offset().top}, 'slow');
+        }
+
+        function initSlider() {
             $('.slider_wrapper')._TMS({
                 show: 0,
                 pauseOnHover: false,
@@ -48,53 +63,55 @@
                 waitBannerAnimation: false,
                 progressBar: false
             });
-        });
-        $(document).ready(function () {
+        }
+
+        function initMap() {
             !function () {
                 var map = []
-                        , names = []
-                        , win = $(window)
-                        , header = $('header')
-                        , currClass
+                  , names = []
+                  , win = $(window)
+                  , header = $('header')
+                  , currClass
                 $('.content').each(function (n) {
                     map[n] = this.offsetTop
                     names[n] = $(this).attr('id')
                 })
                 win
-                        .on('scroll', function () {
-                            var i = 0
-                            while (map[i++] <= win.scrollTop());
-                            if (currClass !== names[i - 2])
-                                currClass = names[i - 2]
-                            header.removeAttr("class").addClass(names[i - 2])
-                        })
+                  .on('scroll', function () {
+                      var i = 0
+                      while (map[i++] <= win.scrollTop());
+                      if (currClass !== names[i - 2])
+                          currClass = names[i - 2]
+                      header.removeAttr("class").addClass(names[i - 2])
+                  })
             }();
-        });
-        function goToByScroll(id) {
-            $('html,body').animate({scrollTop: $("#" + id).offset().top}, 'slow');
         }
-        $(document).ready(function () {
-            $().UItoTop({easingType: 'easeOutQuart'});
-        });
-    </script>
 
-    <script>
+        function initFoodInfo(foodName) {
 
-            $(document).ready(function () {
-                var foodName="Sushi";
-                $.getJSON("result_streetfood.json", function(data) {
-                    var foodData = data[foodName];
-                    $.each(data.foods, function(index, food) {
-                        if(food['name']==foodName){
+            $.getJSON("result_streetfood.json", function(data) {
+                $.each(data.foods, function(index, food) {
+                    if(food['name']==foodName){
                         var tblRow = "<tr>" + "<td> <img src=" + food['image']['source'] + "> </td>" +
-                                    "<td>" + food['description'] + "</td>" + "</tr>"
+                          "<td>" + food['description'] + "</td>" + "</tr>"
                         $(tblRow).appendTo("#streetfood tbody");
-                        }
-                    });
+                    }
                 });
             });
+        }
 
-    </script> 
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+              results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+    </script>
+
     <!--[if lt IE 8]>
     <div style=' clear: both; text-align:center; position: relative;'>
         <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
