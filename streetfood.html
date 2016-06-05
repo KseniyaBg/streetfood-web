@@ -80,37 +80,19 @@
 
     <script>
 
-        $(document).ready(function() {
-
-           var foodName="Taco"
-   
-           $.getJSON('result_streetfood.json', function(data) {
-
-
-               		var foodData = data[foodName];
-					
-					var tblRow = "<tr>" + "<td> <img src=" + foodData.en.source + "> </td>" +
-					                 "<td>" + foodData.en.desc + "</td>" + "</tr>"
-					                 $(tblRow).appendTo("#streetfood tbody");
-
-             /*  	for (var foodName in data) {
-						var foodData = data[foodName];
-						console.log(foodData);
-						var tblRow = "<tr>" + "<td> <img src=" + foodData.en.source + "> </td>" +
-					                 "<td>" + foodData.en.desc + "</td>" + "</tr>"
-					                 $(tblRow).appendTo("#streetfood tbody");
-				} 
-
-                    $.each(data, function(i, foods) {
-                    var tblRow = "<tr>" + "<td> <img src=" + data[foodName].en.source + "> </td>" +
-                                     "<td>" + data[foodName].en.desc + "</td>" + "</tr>"
-                                     $(tblRow).appendTo("#streetfood tbody");
+            $(document).ready(function () {
+                var foodName="Sushi";
+                $.getJSON("result_streetfood.json", function(data) {
+                    var foodData = data[foodName];
+                    $.each(data.foods, function(index, food) {
+                        if(food['name']==foodName){
+                        var tblRow = "<tr>" + "<td> <img src=" + food['image']['source'] + "> </td>" +
+                                    "<td>" + food['description'] + "</td>" + "</tr>"
+                        $(tblRow).appendTo("#streetfood tbody");
+                        }
                     });
-                    });
-                */
-			});
-			
-		});
+                });
+            });
 
     </script> 
     <!--[if lt IE 8]>
