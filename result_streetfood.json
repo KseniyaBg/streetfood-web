@@ -1,15 +1,211 @@
-//TODO: Set up json file according to this format
-
 {
   "foods": [
     {
+      "name": "Cronut",
+      "image": {
+        "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Cronut.jpg/150px-Cronut.jpg",
+        "width": 150,
+        "height": 113
+      },
+      "description": ""
+    },
+    {
+      "name": "Sushi",
+      "image": {
+        "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Sasazushi.jpg/150px-Sasazushi.jpg",
+        "width": 150,
+        "height": 113
+      },
+      "description": "<p><b>Sushi</b> (jap. <span lang=\"ja\" xml:lang=\"ja\">寿司</span> oder <span lang=\"ja\" xml:lang=\"ja\">すし</span>, seltener auch <span lang=\"ja\" xml:lang=\"ja\">壽司</span>, <span lang=\"ja\" xml:lang=\"ja\">鮨</span> oder <span lang=\"ja\" xml:lang=\"ja\">鮓</span>) ist ein japanisches Gericht aus erkaltetem, gesäuertem Reis, ergänzt um weitere Zutaten wie rohen oder geräucherten Fisch, rohe Meeresfrüchte, Nori (getrockneter und gerösteter Seetang), Gemüse, Tofuvarianten und Ei. Die Zusammenstellung variiert nach Art und Rezept. Sushi wird in mundgerechten Stücken optisch ansprechend zubereitet serviert.</p>\n<p></p>\n"
+    },
+    {
+      "name": "Taco",
+      "image": {
+        "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/150px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg",
+        "width": 150,
+        "height": 113
+      },
+      "description": "<p>Ein <b>Taco</b> ist ein Fast-Food-Gericht der mexikanischen Küche, das sich in ganz Nord- und Mittelamerika großer Beliebtheit erfreut. Es besteht aus einer Tortilla aus Weizen oder Mais, die nach Belieben mit vielen Zutaten gefüllt werden kann.</p>\n<p>In den meisten Fällen wird der Taco mit einer eher scharfen Salsa abgeschmeckt. Tacos werden immer aus der Hand gegessen.</p>\n<p></p>\n"
+    },
+    {
+      "name": "Ramen",
+      "image": {
+        "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Soy_ramen.jpg/150px-Soy_ramen.jpg",
+        "width": 150,
+        "height": 113
+      },
+      "description": "<p><b>Ramen</b> (jap. <span lang=\"ja\" xml:lang=\"ja\">ラーメン</span> auch seltener mit Kanji <span lang=\"ja\" xml:lang=\"ja\">拉麺</span>, <i>rāmen</i>, /<span><span title=\"Aussprache im Internationalen Phonetischen Alphabet (IPA)\">ɾaːmeɴ</span></span>/) sind – ebenso wie etwa Somen, Soba und Udon – eine eigene Art japanischer Nudeln. Diese Nudeln, vor allem aber auch die daraus hergestellte Nudelsuppe, werden <i>Ramen</i> genannt. Ursprünglich stammt das Gericht aus China, wurde aber im 19. Jahrhundert von der japanischen Küche übernommen und angepasst. In Japan werden Ramen in speziellen Restaurants – den „Ramen-Läden“ bzw. „Ramen-ya“ (<span lang=\"ja\" xml:lang=\"ja\">ラーメン屋</span>)   – verkauft, die sich ausschließlich auf den Verkauf dieser Suppen spezialisiert haben. Außerhalb Japans sind Ramen vor allem als Instant-Nudelsuppen bekannt.</p>\n<p></p>\n"
+    },
+    {
+      "name": "Leberk%C3%A4se",
+      "image": {
+        "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Leberk%C3%A4se-1.jpg/150px-Leberk%C3%A4se-1.jpg",
+        "width": 150,
+        "height": 129
+      },
+      "description": "<p><b>Leberkäse</b>, <b>Fleischkäse</b> oder <b>Fleischlaib</b> ist eine in der deutschen, österreichischen und Schweizer Küche verbreitete Brühwurstsorte. Charakteristisch ist seine eckige Pastetenform. In Norddeutschland wird als „Leberkäse“ auch eine in Därme abgefüllte, nicht gebackene Brühwurst mit runder Schnittform angeboten. Ursprünglich wurde dem Leberkäse Leber beigemengt, heute ist die Bezeichnung <i>Fleischkäse</i> (ursprünglich ein Schweizer Wort) treffender, da zumeist auf Leber verzichtet wird. Die Bezeichnung als Käse leitet sich lediglich von der Form der Laibe ab.</p>\n<p></p>\n"
+    },
+    {
+      "name": "Curry",
+      "image": {
+        "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Indiandishes.jpg/150px-Indiandishes.jpg",
+        "width": 150,
+        "height": 113
+      },
+      "description": ""
+    },
+    {
+      "name": "Ice_cream",
+      "image": {
+        "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Ice_Cream_dessert_02.jpg/112px-Ice_Cream_dessert_02.jpg",
+        "width": 112,
+        "height": 150
+      },
+      "description": {}
+    },
+    {
+      "name": "Bibimbap",
+      "image": {
+        "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Korean_cuisine-Bibimbap-08.jpg/150px-Korean_cuisine-Bibimbap-08.jpg",
+        "width": 150,
+        "height": 113
+      },
+      "description": "<p><b>Bibimbap</b> (Aussprache: [<span><span title=\"Aussprache im Internationalen Phonetischen Alphabet (IPA)\">pibimp͈ap̚</span></span>]) ist ein beliebtes koreanisches Gericht, das mit Reis und verschiedenen Gemüsesorten, etwas Rindfleisch, einem rohen oder gebratenen Ei und Gochujang (einer Chilipaste) zubereitet wird. Der Name Bibimbap kommt von <i>bapeul bibida</i> (<span lang=\"ko\" xml:lang=\"ko\">밥을 비비다</span>), was so viel heißt wie „Reis umrühren“ oder „Reis mischen“. Es wird noch ungemischt serviert und vor dem Essen mit dem Löffel, mit dem es auch gegessen wird, durchgerührt. Dazu werden eine leichte Suppe und oft auch weitere Beilagen gereicht, die mit Stäbchen gegessen werden.</p>\n<p>Je nach Region gibt es unterschiedliche Rezepte und Zutaten. Bibimbap aus Jeonju gilt als Spezialität, gegessen wird es aber auf der gesamten Koreanischen Halbinsel. Eine Variante ist das sogenannte <i>Dolsot Bibimbap</i> (<span lang=\"ko\" xml:lang=\"ko\">돌솥 비빔밥</span>, dolsot = Steintopf). Dessen Zubereitung unterscheidet sich nicht wesentlich von normalem Bibimbap, es wird aber in einem heißen Steintopf serviert. Dadurch wird die Speise noch während des Essens weiter erhitzt und gebraten.</p>\n\n"
+    },
+    {
+      "name": "Doughnut",
+      "image": {
+        "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Glazed-Donut.jpg/150px-Glazed-Donut.jpg",
+        "width": 150,
+        "height": 98
+      },
+      "description": ""
+    },
+    {
+      "name": "Ceviche",
+      "image": {
+        "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Ceviche_del_Per%C3%BA.jpg/150px-Ceviche_del_Per%C3%BA.jpg",
+        "width": 150,
+        "height": 109
+      },
+      "description": "<p><b>Ceviche</b> (auch <i>Cebiche</i> oder <i>Seviche</i>) ist ein Gericht, das aus Peru stammt und mittlerweile in weiten Teilen Lateinamerikas verbreitet ist.</p>\n<p>Ceviche besteht in seiner ursprünglichen Form aus kleingeschnittenem, rohem Fisch verschiedener Sorten, der ungefähr 15 Minuten in Limettensaft mariniert wird. In Scheiben geschnittene rote Zwiebeln und in manchen Rezepten Rocoto, ein sehr scharfes, paprikaähnliches Gemüse aus Peru, werden mit dem Fisch vermischt. Chemisch gesehen kommt es aufgrund der in den Limetten vorhandenen Zitronensäure zu einer Denaturierung des Eiweißes, ähnlich wie beim Kochen.</p>\n<p>Je nach Land haben sich Variationen des Rezepts entwickelt. Als <i>Ceviche Mixto</i> wird eine Variante mit verschiedenen Meeresfrüchten bezeichnet; zu diesen Meeresfrüchten gehören etwa auch Conchas Negras, eine Meeresschnecke. In seiner bekanntesten Form werden vorgekochte Shrimps, gekochter Fisch oder alternativ Palmenherzen verwendet. Weitere Zutaten sind vor allem Gemüsezwiebeln, Staudensellerie, Korianderblätter und Chilischoten. In Peru wird Ceviche mit Süßkartoffeln, geröstetem Mais oder Yuca serviert, in Ecuador z. B. wird es mit geröstetem Mais und Kochbananenchips serviert. In Peru wird der Limettensaft mit Aji (molido – püriert), einer besonderen Chili-Art, gewürzt. In Chile werden oft gehackte Tomaten hinzugefügt.</p>\n<p>In peruanischen Großstädten, wie Lima, findet man Cevicherías fast \"an jeder zweiten Ecke\". Inzwischen findet man peruanische Restaurants, die Ceviche anbieten, aber auch in fast jeder Großstadt der Welt. Bei ihrem Besuch in Buenos Aires im Jahr 2016 ging die Familie von Präsident Obama in ein peruanisches Restaurant und seine Töchter lobten Ceviche als ihr Lieblingsgericht.</p>\n"
+    },
+    {
+      "name": "Falafel",
+      "image": {
+        "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Falafel_balls.jpg/150px-Falafel_balls.jpg",
+        "width": 150,
+        "height": 100
+      },
+      "description": "<p><b>Falafel</b> (arabisch <bdi dir=\"ltr\"><bdo dir=\"rtl\" lang=\"ar\" class=\"arabic spanAr\" style=\"direction:rtl; unicode-bidi:embed; font-size:120%;\">فلافل</bdo></bdi>, DMG <i><span lang=\"ar-Latn\">falāfil</span></i>, <span> Falāfel<sup><span title=\"Hilfe – Audio\">?</span>/<span title=\"Tondateibeschreibungsseite mit Lizenzangabe für „ArFalafel.ogg“\">i</span></sup></span>) sind frittierte Bällchen aus pürierten Bohnen oder Kichererbsen, Kräutern und Gewürzen, die vor allem als Imbiss beliebt sind. Das Gericht stammt aus der arabischen Küche.</p>\n<p></p>\n"
+    },
+    {
+      "name": "Sandwich",
+      "image": {
+        "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/BLT_sandwich_on_toast.jpg/150px-BLT_sandwich_on_toast.jpg",
+        "width": 150,
+        "height": 112
+      },
+      "description": "<p>Ein <b>Sandwich</b> ist ein ursprünglich englischer, heute international verbreiteter Imbiss. Es besteht aus zwei oder mehr dünnen Brotscheiben, zwischen denen sich ein beliebiger würziger Belag wie kalter Braten, Schinken, Thunfisch, Käse, Eier-, Gurken- oder Tomatenscheiben, auch kombiniert, befindet. Für klassische Sandwiches wird meist ungeröstetes Toastbrot ohne Rinde verwendet, die belegten Scheiben werden diagonal zu Dreiecken geschnitten.</p>\n<p>Zur Zubereitung klassischer Sandwiches werden zunächst dünne, große Scheiben von Kastenweißbrot gebuttert, mit Braten, Schinken, Fisch, Lebercreme oder Ähnlichem belegt, mit Senf, Meerrettich, Mayonnaise, Ketchup, Sandwich Spread (eine Art Remoulade) oder Ähnlichem ergänzt, eventuell noch mit Blättern von Kopfsalat, Tomaten- oder Gurkenscheiben, und mit einer zweiten gebutterten Brotscheibe bedeckt. Anschließend werden die Sandwiches etwas zusammengedrückt, die Ränder abgeschnitten und alles ein- oder zweimal diagonal durchgeschnitten. Bei geeigneter Zusammenstellung der Zutaten haften alle Teile aneinander, so dass das Sandwich bequem aus der Hand gegessen werden kann.</p>\n<p></p>\n"
+    },
+    {
+      "name": "Currywurst",
+      "image": {
+        "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Currywurst_%26_Pommes_frites.jpg/150px-Currywurst_%26_Pommes_frites.jpg",
+        "width": 150,
+        "height": 138
+      },
+      "description": "<p>Die <b>Currywurst</b> [<span><span title=\"Aussprache im Internationalen Phonetischen Alphabet (IPA)\">ˈkœ.ʀiˌvʊʁst</span></span>] (<span> Anhören<sup><span title=\"Hilfe – Audio\">?</span>/<span title=\"Tondateibeschreibungsseite mit Lizenzangabe für „GT Körriwuarst DE.ogg“\">i</span></sup></span>) ist ein deutsches Gericht aus Bratwurst oder anderer Brühwurst, die ganz oder geschnitten mit einer tomatenhaltigen Sauce und Currypulver oder mit einem Curry-Ketchup serviert wird. Bei den Würsten handelt es sich meist um feine, vorgegarte Brühwürste mit oder ohne Darm. Serviert wird das seit der Nachkriegszeit bekannte Gericht vor allem in der Imbissgastronomie. Es ist außerdem ein beliebtes Angebot in deutschen Betriebskantinen, wie beispielsweise Mitteilungen großer Catering-Unternehmen zeigen, und auch als Fertiggericht für Privathaushalte erhältlich.</p>\n<p>In Deutschland werden jährlich über 800 Millionen Currywürste verzehrt. Als Currywurst werden unabhängig davon auch Würste bezeichnet, bei denen Currypulver als Zusatz im Brät enthalten ist.</p>\n<p></p>\n"
+    },
+    {
+      "name": "Pho",
+      "image": {
+        "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Ph%E1%BB%9F_b%C3%B2%2C_C%E1%BA%A7u_Gi%E1%BA%A5y%2C_H%C3%A0_N%E1%BB%99i.jpg/150px-Ph%E1%BB%9F_b%C3%B2%2C_C%E1%BA%A7u_Gi%E1%BA%A5y%2C_H%C3%A0_N%E1%BB%99i.jpg",
+        "width": 150,
+        "height": 100
+      },
+      "description": ""
+    },
+    {
+      "name": "Cupcake",
+      "image": {
+        "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Chocolate_cupcakes.jpg/150px-Chocolate_cupcakes.jpg",
+        "width": 150,
+        "height": 98
+      },
+      "description": "<p>Ein <b>Cupcake</b> (engl. auch <i>Fairy cake</i>) ist ein kleiner Kuchen, der in einer tassengroßen Backform gebacken wird und mit einem Guss bzw. einer Cremehaube versehen ist. Der Name stammt daher, dass der Teig ursprünglich in einer Tasse (englisch <i>cup</i>) gebacken wurde. Der Begriff <i>Cupcake</i> wurde das erste Mal schriftlich 1796 in dem Kochbuch <i>American Cookery</i> der US-Amerikanerin Amelia Simmons erwähnt.</p>\n<p>Cupcakes gelten als ein Beispiel für einen Nahrungstrend, dessen Entstehen sich gut nachzuvollziehen lässt: Cupcakes waren lange Zeit eine eher alltägliche Gebäcksorte, in den späten 1990er Jahren begannen jedoch in New York einzelne Bäckereien aufwändig dekorierte Cupcakes zu verkaufen und trafen auf reges Kundeninteresse. Der Trend wurde zunehmend auch von Medien aufgegriffen, Cupcakes entwickelten sich in Nordamerika innerhalb weniger Jahre zu einem „In“-Produkt mit einem hippen Nimbus. In den Vereinigten Staaten, Kanada und in Großbritannien findet man derzeit eine Vielzahl auf Cupcakes ausgerichteter Cafés. In anderen Ländern, in denen Süßgebäck in einem anderen kulturellen Kontext steht, hat der Trend vergleichsweise weniger Fuß gefasst. Jedoch gibt es auch in größeren deutschen Städten auf Cupcakes spezialisierte Cafés und Bäckereien.</p>\n<p>Muffins gelten als der Vorläufer des aktuellen Cupcake-Trends. Cupcakes sind im Vergleich zum Muffin süßer, werden anders als Muffins aus Rührteig hergestellt und enthalten in der Regel keine Nüsse oder ähnliches. Sie werden außerdem nach dem Backen mit einem Guss versehen. Rein vom Äußerlichen erkennt man den Unterschied zwischen Cupcakes und Muffins am Topping. Muffins haben in der Regel nämlich keine Cremehaube.</p>\n<p></p>\n"
+    },
+    {
+      "name": "French_fries",
+      "image": {
+        "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Pommes-1.jpg/150px-Pommes-1.jpg",
+        "width": 150,
+        "height": 103
+      },
+      "description": ""
+    },
+    {
+      "name": "Lahmacun",
+      "image": {
+        "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Lahmacun.jpg/150px-Lahmacun.jpg",
+        "width": 150,
+        "height": 109
+      },
+      "description": "<p><b>Lahmacun</b> [<span><span title=\"Aussprache im Internationalen Phonetischen Alphabet (IPA)\">lahmaˈdʒun</span></span>], auch <b>türkische Pizza</b> genannt, ist ein Fladenbrot aus Hefeteig, das vor dem Backen dünn mit einem würzigen Ragout aus Hackfleisch, Zwiebeln und Tomaten bestrichen wird. In der vegetarischen Variante wird Lahmacun ohne Hackfleisch hergestellt. Lahmacun ist ein traditioneller Imbiss, der meist direkt heiß aus dem Backofen gegessen wird. Ähnliche Gerichte sind auch im arabischen Raum bekannt. Die Bezeichnung <i>Lahmacun</i> leitet sich ab vom aramäischen „lahm am dschun“, was so viel bedeutet wie „Fleisch mit Teig“.</p>\n<p>Weitgehend wird angenommen, dass Assyrer schon im 2. Jahrtausend v. Chr. ein ähnliches Gericht kannten und griechische Kaufleute es nach Griechenland brachten. Die Assyrer erfanden eine Technik, die es ermöglichte, den Teig hauchdünn zu formen. Es ist eine Speise des Nahen Ostens, die von vielen Kulturen übernommen wurde.</p>\n<p>Zur Zubereitung wird ein einfacher Teig aus Weizenmehl, Hefe, Wasser, Salz und eventuell etwas Öl zu millimeterdünnen, tellergroßen Fladen ausgerollt, mit einer Mischung aus rohem, gehacktem Lamm- und/oder Rindfleisch, Tomaten, Zwiebeln, Knoblauch und Paprikamark, die mit Kreuzkümmel, Sumak, Pfeffer und Salz gewürzt ist, bestrichen und möglichst in einem Steinbackofen direkt auf dem Boden gebacken.</p>\n<p>Serviert wird Lahmacun traditionell nur mit glatter Petersilie, Zwiebelstückchen und einem Zitronenviertel – der Fladen wird mit dem Zitronensaft beträufelt, nach Geschmack noch mit Pul Biber scharf gewürzt, mit der Petersilie zusammengerollt und aus der Hand gegessen. Im deutschsprachigen Raum wird Lahmacun auch mit Salat, teils noch mit einer Sauce (Cacık) oder Dönerfleisch eingerollt als Imbiss angeboten.</p>\n"
+    },
+    {
       "name": "Baozi",
-      "description": "<p>A <b>baozi</b> (Chinese: <span lang=\"zh\" xml:lang=\"zh\"><span><span><span> </span>包子</span></span></span>) or simply known as <b>bao</b>, <b>bau</b>, <b>humbow</b>, <b>nunu</b>, <b>bakpao</b> (Hokkien), <b>bausak</b>, <b>pow</b>, <b>pau</b> or <b>pao</b> (Hakka) is a type of steamed, filled, bun or bread-like (i.e. made with yeast) item in various Chinese cuisines, as there is much variation as to the fillings and the preparations. In its bun-like aspect it is very similar to the traditional Chinese mantou. It can be filled with meat and/or vegetarian fillings. In Japanese, the dish is known as \"<i>paozu</i>\".</p>\n<p>Two types are found in most parts of China and Indonesia: <i>Dàbāo</i> (大包, \"big bun\"), measuring about 10 cm across, served individually, and usually purchased for take-away. The other type, <i>Xiǎobāo</i> (小包, \"small bun\"), measure approximately 5 cm wide, and are most commonly eaten in restaurants, but may also be purchased for take-away. Each order consists of a steamer containing between three and ten pieces. A small ceramic dish is provided for vinegar or soy sauce, both of which are available in bottles at the table, along with chili and garlic paste.</p>\n<p></p>\n",
       "image": {
         "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nangua_Baozi_%28chinese_dumplings%29.jpg/150px-Nangua_Baozi_%28chinese_dumplings%29.jpg",
         "width": 150,
         "height": 113
-      }
+      },
+      "description": "<p><b>Baozi</b> (chin. 包子, Pinyin: Bāozi; Hok.: 燒包, POJ: Sio-pau) ist eine gedämpfte, gefüllte Teigtasche. Es ist in überall in China beliebt und existiert in den verschiedenen chinesischen Küchen als Gericht. Die Füllung variiert stark, sie kann sowohl aus Fleisch als auch aus vegetarischen Zutaten wie roter Bohnenpaste oder unterschiedliche Gemüse, wie, z.B. das Pak Choi bestehen. Ein Baozi ist dem chinesischen Mantou sehr ähnlich. In China wird es zu allen Mahlzeiten gegessen, besonders zum Frühstück.</p>\n"
+    },
+    {
+      "name": "Hamburger",
+      "image": {
+        "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/YOKOSUKA-NAVY-BURGER-TSUNAMI.JPG/150px-YOKOSUKA-NAVY-BURGER-TSUNAMI.JPG",
+        "width": 150,
+        "height": 113
+      },
+      "description": "<p>Ein <b>Hamburger</b> (auch kurz <b>Burger</b>) ist ein warmes Schnell- oder Fertiggericht und bildet den Standardartikel vieler Fast-Food-Ketten. Es besteht aus einem Brötchen, dem <i>Bun</i>, mit verschiedenen Belägen, hauptsächlich einer gegrillten Scheibe aus Rinderhackfleisch (einer Art Hacksteak), dem <i>Patty</i>.</p>\n\n<p></p>\n"
+    },
+    {
+      "name": "Doner_kebab",
+      "image": {
+        "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Doner_kebab%2C_Istanbul%2C_Turkey.JPG/150px-Doner_kebab%2C_Istanbul%2C_Turkey.JPG",
+        "width": 150,
+        "height": 113
+      },
+      "description": {}
+    },
+    {
+      "name": "Pulled_pork",
+      "image": {
+        "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Pulled_pork_while_pulling.JPG/150px-Pulled_pork_while_pulling.JPG",
+        "width": 150,
+        "height": 113
+      },
+      "description": ""
+    },
+    {
+      "name": "Shawarma",
+      "image": {
+        "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Shawarma_%282223426004%29.jpg/150px-Shawarma_%282223426004%29.jpg",
+        "width": 150,
+        "height": 113
+      },
+      "description": {}
+    },
+    {
+      "name": "Hot_dog",
+      "image": {
+        "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Hot_dog_with_mustard.png/150px-Hot_dog_with_mustard.png",
+        "width": 150,
+        "height": 73
+      },
+      "description": {}
     }
   ]
 }
