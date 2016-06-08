@@ -56,9 +56,16 @@ function loadWorldmap(){
 					var count = countEdits(resJson, food, lang);
 					if(!lfObj.hasOwnProperty(lang)){
 						lfObj[lang] = {};
+						lfObj[lang]["topFoods"] = { "edits": [0, 0, 0], "food": ["", "", ""]};
 					}
 					lfObj[lang][food] = count;
+					lfObj[lang]["topFoods"] = set_max(food, count, lfObj[lang]["topFoods"]);
 				}
+			}
+			for (var entry in lfObj){
+				lfObj[entry]["top1"] = lfObj[entry]["topFoods"]["food"][0];
+				lfObj[entry]["top2"] = lfObj[entry]["topFoods"]["food"][1];
+				lfObj[entry]["top3"] = lfObj[entry]["topFoods"]["food"][2];
 			}
 			console.log('language_to_food_data', lfObj);
 			for(var country in clJson){
@@ -145,11 +152,15 @@ function loadWorldmap(){
 			.append('svg:tspan')
 			.attr('x', 0)
 			.attr('dy', 20)
-			.text(function(d) { return d.properties.Curry? d.properties.Curry: ''; })
+			.text(function(d) { return d.properties["top1"]? d.properties["top1"]: ''; })
 			.append('svg:tspan')
 			.attr('x', 0)
 			.attr('dy', 20)
-			.text(function(d) { return d.properties[0] ? d.properties[0] : ''; });
+			.text(function(d) { return d.properties["top2"]? d.properties["top2"]: ''; })
+			.append('svg:tspan')
+			.attr('x', 0)
+			.attr('dy', 20)
+			.text(function(d) { return d.properties["top3"]? d.properties["top3"]: ''; })
 	}
 
 	function mouseoverLegend(datum, index) {
@@ -162,6 +173,7 @@ function loadWorldmap(){
 	}
 
 	function mouseoutLegend(datum, index) {
+		console.log(datum);
 		d3.selectAll('.subunit-label.la'+datum.id+datum.properties.name.replace(/[ \.#']+/g,''))
 			.style('display', 'none');
 		d3.selectAll('.subunit.ca'+datum.id)
@@ -173,7 +185,12 @@ function loadWorldmap(){
 		console.log('coutryclicked datum', datum);
 	}
 	function heatColor(d) {
-		return '#F0F0F0';
+		var color = '#F0F0F0';
+		if (!d.properties.hasOwnProperty("top1")||d.properties["top1"]==""&&d.properties["top2"]==""&&d.properties["top3"]==""){
+			//color = '#FF0000';
+			color = '#FB5054';
+		}
+		return color;
 		/*if (quantiles['0.95'] === 0 && minDocCount === 0) return '#F0F0F0';
 		 if (!d.properties.doc_count) return '#F0F0F0';
 		 if (d.properties.doc_count > quantiles['0.95']) return palette[(palette.length - 1)];
@@ -209,6 +226,26 @@ function loadWorldmap(){
 		var keys = [];
 		for(var k in object) keys.push(k);
 		return keys;
+	}
+
+	function set_max(food, edits, obj) {
+		if (edits > obj.edits[0]) {
+			obj.edits[2] = obj.edits[1];
+			obj.edits[1] = obj.edits[0];
+			obj.edits[0] = edits;
+			obj.food[2] = obj.food[1];
+			obj.food[1] = obj.food[0];
+			obj.food[0] = food;
+		} else if (edits > obj.edits[1]){
+			obj.edits[2] = obj.edits[1];
+			obj.edits[1] = edits;
+			obj.food[2] = obj.food[1];
+			obj.food[1] = food;
+		}else if (edits > obj.edits[2]){
+			obj.edits[2] = edits;
+			obj.food[2] = food;
+		}
+		return obj;
 	}
 }
 
