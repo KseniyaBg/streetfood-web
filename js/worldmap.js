@@ -110,13 +110,13 @@ function loadWorldmap(){
 		 }
 		 }
 		 }*/
-		for(var county in data) {
-			var cCode = county.toUpperCase();
+		for(var rcounty in data) {
+			var cCode = country.toUpperCase();
 			for(var wdx=0; wdx < world.objects.subunits.geometries.length; wdx++) {
 				var cName = world.objects.subunits.geometries[wdx].id.toUpperCase();
 				if (cCode === cName) {
-					for(var food in data[county]){
-						world.objects.subunits.geometries[wdx].properties[food] = data[county][food];
+					for(var food in data[country]){
+						world.objects.subunits.geometries[wdx].properties[food] = data[country][food];
 					}
 				}
 			}
